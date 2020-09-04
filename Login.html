@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Login
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <form name="login">
+        <table>
+            <tr>
+                <br>
+                <th>
+                    <h5>Nombre de usuario:</h5>
+                </th>
+                <td>
+                    <input type="text" name="usuario" value="" />
+                </td>
+            </tr>
+            <tr>
+                <br>
+                <th>
+                    <h5>Contraseña:</h5>
+                </th>
+                <td>
+                    <input type="password" name="password" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input value="Login" target="_parent" onclick="Login()" type="button" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+<footer>
+    <script>
+        function Login() {
+            let usuario = document.login.usuario.value;
+            let password = document.login.password.value;
+
+            if (usuario == "yeid" && password == "1234") {
+                alert("Usuario y contraseña correctos. Bienvenido!");
+            } else {
+                alert("Usuario o contraseña incorrectos.");
+            }
+        }
+    </script>
+</footer>
+
+</html>
